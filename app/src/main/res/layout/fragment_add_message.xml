@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/banner_iv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:alpha="0.8"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_spread_love"/>
+
+
+            <CheckedTextView
+                android:id="@+id/spinner_legend"
+                style="?android:attr/spinnerDropDownItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="marquee"
+                android:text="@string/receiver"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textsize_small"
+                android:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/spinner_names"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/colorAccent"
+                android:popupBackground="@color/colorPrimary"
+                android:visibility="visible" />
+
+
+            <CheckedTextView
+                android:id="@+id/spinnerweekday_legend"
+                style="?android:attr/spinnerDropDownItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="marquee"
+                android:text="@string/dayweek"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textsize_small"
+                android:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/spinner_day_week_names"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/colorAccent"
+                android:popupBackground="@color/colorPrimary"
+                android:visibility="visible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_et_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/msg_et_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/love_msg"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/msg_et"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:inputType="textMultiLine"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/img_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/darkBackground"
+                android:textSize="@dimen/textsize_large"
+                android:gravity="center"
+                android:text="Selecionar imagem" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enviar" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Counting Days</string>
+    <string name="not_registered_yet">Não encontrou seu nickname? cadastrar</string>
+    <string name="nickname">Nickname</string>
+    <string name="receiver">Destinatario</string>
+    <string name="title">Titulo da mensagem</string>
+    <string name="love_msg">Mensagem de amor...</string>
+    <string name="dayweek">Dia da semana</string>
+    <string name="error">Erro no upload da imagem</string>
+</resources>

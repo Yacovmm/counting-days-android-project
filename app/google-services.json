@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593455441938",
+    "project_id": "counting-days-561bb",
+    "storage_bucket": "counting-days-561bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593455441938:android:710a1bcc7fd4a80e6b10cb",
+        "android_client_info": {
+          "package_name": "com.yacov.countingdays"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593455441938-eqpgdm4bo4q661jgq8f5932caf0jsp30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9ibu5Irt8MWLa4uTuomjlFubq0VS9s7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593455441938-eqpgdm4bo4q661jgq8f5932caf0jsp30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
