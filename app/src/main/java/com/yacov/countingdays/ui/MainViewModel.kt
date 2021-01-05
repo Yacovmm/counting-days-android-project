@@ -25,7 +25,7 @@ class MainViewModel : ViewModel() {
         get() = messagesLive
     fun getMessages(userReceiver: String) = viewModelScope.launch {
         val messagesList = MessagesDatabase().getTodayMessagesToUser(userReceiver)
-        messagesLive.postValue(messagesList)
+        messagesLive.postValue(messagesList.sortedBy { it.createdAt }.reversed())
     }
 
     private val messageSavedLive = MutableLiveData<Boolean>()
