@@ -5,7 +5,10 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.messaging.FirebaseMessaging
 import com.yacov.countingdays.R
+import com.yacov.countingdays.data.local.LocalSharedPreferences
+import com.yacov.countingdays.utils.Constants.SP_KEY
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,5 +21,15 @@ class MainActivity : AppCompatActivity() {
         IntentFilter(Intent.ACTION_PROCESS_TEXT)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
+        subscribeToFirebaseTopic()
+    }
+
+    private fun subscribeToFirebaseTopic() {
+        LocalSharedPreferences(this).getSharedPreferences(SP_KEY)?.let {
+            println("Passou aqui")
+            println(it)
+            FirebaseMessaging.getInstance().subscribeToTopic(it)
+        }
     }
 }
