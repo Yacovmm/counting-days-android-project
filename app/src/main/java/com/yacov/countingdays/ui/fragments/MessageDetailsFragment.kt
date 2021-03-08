@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import coil.load
 import com.yacov.countingdays.R
 import com.yacov.countingdays.databinding.FragmentMessageDetailsBinding
@@ -33,6 +35,8 @@ class MessageDetailsFragment : Fragment(R.layout.fragment_message_details) {
         super.onViewCreated(view, savedInstanceState)
 
         val message = MessageDetailsFragmentArgs.fromBundle(requireArguments()).message
+
+        binding.toolbar.setupWithNavController(findNavController())
 
         if (message.imageUrl.isNotEmpty()) binding.bannerIv.load(message.imageUrl)
 

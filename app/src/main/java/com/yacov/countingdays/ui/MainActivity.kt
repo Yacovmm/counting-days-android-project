@@ -17,6 +17,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//
+//        val toolbar: Toolbar = findViewById(R.id.toolbar)
+//
+//        setSupportActionBar(toolbar)
+//        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         IntentFilter(Intent.ACTION_PROCESS_TEXT)
 
@@ -27,8 +32,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun subscribeToFirebaseTopic() {
         LocalSharedPreferences(this).getSharedPreferences(SP_KEY)?.let {
-            println("Passou aqui")
-            println(it)
             FirebaseMessaging.getInstance().subscribeToTopic(it)
         }
     }

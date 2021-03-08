@@ -7,4 +7,6 @@
     <string name="love_msg">Mensagem de amor...</string>
     <string name="dayweek">Dia da semana</string>
     <string name="error">Erro no upload da imagem</string>
+    <string name="answer">Responder</string>
+    <string name="answer_hint">Replica de amor...</string>
 </resources>
